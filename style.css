@@ -1,0 +1,127 @@
+.h {
+  display: none
+}
+.test {
+  background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+  height: 95vh;
+  max-width: 1366px; 
+  padding: 30px;
+}
+.header {
+  max-width: 700px;
+  border: 3px solid hsl(217, 16%, 45%);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+} 
+.score {
+  text-align: center;
+  color: hsl(229, 64%, 46%); 
+  margin-top: 15px;
+} 
+.board {
+  background: white; 
+  border-radius: 10px; 
+  width: 130px; 
+  height:100px;
+}
+.count {
+  color: hsl(229, 25%, 31%);
+}
+.counter-block {
+  display: flex;
+  justify-content: space-between;
+  font-size: 50px; 
+  font-weight: 5px; 
+  padding: 40px; 
+  margin-top: -40px;
+}
+
+.wrapp-but {
+  display: block;
+  cursor: pointer;
+  margin-left:1100px;
+  border: 1px solid white;
+  border-radius: 10px;
+  width: 120px;
+  height: 35px;
+  position: relative;
+  z-index: 1;
+}
+.button-rules {
+  padding-top: 8px;
+  text-align: center;
+  color: white;
+  position: relative;
+  z-index: 1;
+} 
+.back {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+.modal-back {
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+.mod-back {
+   opacity: 0;
+  z-index: -1;
+}
+.modal-window {
+  width: 350px;
+  height: 350px;
+  border-radius: 10px;
+  background-color:white;
+  margin: 150px auto;
+}
+.win {
+  
+  background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+  z-index: 0;
+}
+.waves {
+  max-width:750px ;
+  margin: 85px auto;
+}
+.s-one {
+  max-width: 750px;
+  background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+  width: 750px;
+  height: 750px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.wl{
+  margin-right: -20px;
+}
+.wr {
+  margin-left: -20px;
+}
+.s-two {
+  background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.s-three {
+  background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  
+}

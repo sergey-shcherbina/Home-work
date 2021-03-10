@@ -1,0 +1,130 @@
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styleone.css">
+  <link rel="stylesheet" href="styletwo.css">
+  <title>Rock, Paper, Scissors</title>
+
+</head>
+<body>
+
+  <div class="test">
+  
+    <div class="header">
+      <img src="./images/logo.svg">
+      <div class="board">
+        <div class="score">SCORE</div>
+        <div class="counter-block">
+          <div class="count user ">0</div>
+          <div class="count house ">0</div>
+        </div>
+      </div> 
+    </div> 
+    
+    <div class="showone">
+        <div class="block-one">
+          <img src="./images/bg-triangle.svg" class="tr">  
+        </div>
+        <div id="wrapper">
+          <div class="two">
+            <button class="circle-paper listen" data-listen="paper">
+              <div class="circle-small listen" data-listen="paper"> 
+                <img src="./images/icon-paper.svg " width="75px"> 
+              </div>
+            </button>  
+            <button class="circle-scissors listen" data-listen="scissors">
+              <div class="circle-small listen" data-listen="scissors">
+                <img src="./images/icon-scissors.svg" width="80px">
+              </div>
+            </button>
+          </div> 
+          <div class="one">  
+            <button class="circle-rock listen" data-listen="rock">
+              <div class="circle-small listen" data-listen="rock">
+                <img src="./images/icon-rock.svg" width="80px">
+              </div>
+            </button>
+          </div>
+        </div>
+    </div>
+    
+    <div class="showtwo h">
+      <div class="block-two">
+        <div class="left">
+          <p class="w-text mbot">YOU PICKED</p>  
+          <div class="hone "> 
+            <div class="circle-yellow">
+              <div class="circle-large">
+                <img src="./images/icon-scissors.svg" width="120px">
+              </div> 
+            </div>  
+          </div>
+          <p class="w-text mtop h">YOU PICKED</p>  
+        </div>
+        <div class="center h">
+          <div class="block-three">
+            <p class="lose">DRAW</p>
+            <button class="again">
+              <a href=""><span style="color: red">PLAY AGAIN</span></a>
+            </button>
+          </div>  
+        </div>
+        <div class="right">
+          <p class="w-text mbot">THE HOUSE PICKED</p>
+          <div class="htwo ">
+            <div class="balloo">
+              <div class="ball"></div>
+            </div>  
+          </div>
+          <div class="hthree h">
+            <div class="circle-red">
+              <div class="circle-large">
+                  <img src="./images/icon-rock.svg" width="125px">
+              </div>
+            </div>
+          </div>
+          <p class="w-text mtop h">THE HOUSE PICKED</p>
+        </div>
+      </div>
+    </div>
+    
+  
+      <div id="br" class="wrapp-but">
+        <div class="button-rules">RULES</div>
+      </div> 
+  
+
+    <div class=" back modal-back mod-back">
+      <div id="mw" class="modal-window">
+      <div style="display: flex; justify-content: space-between;">
+        <p style="font-size: 20px; font-weight: 2px; padding-left: 20px; color: gray">RULES</p>
+        <div id="x" style="padding-right: 20px; margin-top: 20px; cursor: pointer;">
+          <img src="./images/icon-close.svg">
+        </div>
+      </div>
+      <div style="padding-left: 23px;">
+        <img src="./images/image-rules.svg">
+      </div>
+    </div> 
+    <div class="waves h">
+      <div class="s-one">
+        <div class="s-two">
+          <div class="s-three">
+        </div>
+      </div> 
+    </div>   
+  
+    
+    <div class="zero h">
+      <div class="circle-blue">
+        <div class="circle-large">
+          <img src="./images/icon-paper.svg" width="120px">
+        </div> 
+      </div>
+    </div>  
+  </div>  
+
+ <script src="app.js"></script> 
+
+</body>
+</html>  

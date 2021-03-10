@@ -1,0 +1,136 @@
+.block-two {
+  margin: 30px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} 
+.center {
+  height: 450px;
+  max-width: 250px;
+}
+.block-three {
+  margin: 130px auto;
+  max-width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.lose {
+  padding-top: 40px; 
+  font-size: 40px;
+  font-weight: 4px;
+  text-align: center;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+.again {
+  margin: 0 auto;
+  width: 200px;
+  height: 40px;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+.left {
+  height: 450px;
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.right {
+  height: 450px;
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.mbot{
+  margin-bottom: 50px;
+}
+.mtop{
+  margin-top: 50px;
+}
+.w-text { 
+  font-size: 30px; 
+  font-weight: 3px; 
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+.circle-yellow {
+  background: radial-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+  width: 300px;
+  height: 300px;
+  border-radius: 50%; 
+  align-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+.circle-red {
+  background: radial-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+  width: 300px;
+  height: 300px;
+  border-radius: 50%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+.circle-blue {
+  background: radial-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+  width: 300px;
+  height: 300px;
+  border-radius: 50%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.circle-large {
+  background-color: white;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ball{
+  background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+  
+} 
+.balloo {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+/* .win-lose {
+  animation: blink .3s .2s linear infinite;
+}
+@keyframes blink {
+  100%{background-color: blue;}
+}   */
+
+
