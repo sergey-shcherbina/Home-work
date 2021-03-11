@@ -1,26 +1,19 @@
+let userChoice = 'scissors',compChoise
+
 let buttonRules = document.querySelector('#br')
     modalBack = document.querySelector('.modal-back')
     modalWindow = modalBack.querySelector('#mw')
     x = modalWindow.querySelector('#x')
+    again = document.querySelector('.again')
     waves=document.querySelector('.waves')
-
-  buttonRules.addEventListener('click', func1) 
-  function func1() { 
-    modalBack.classList.toggle('mod-back')
-  }
-
-  x.addEventListener('click', func2) 
-  function func2() {
-    modalBack.classList.toggle('mod-back')
-  } 
-  let showone = document.querySelector('.showone')
+    showone = document.querySelector('.showone')
       showtwo = document.querySelector('.showtwo')
       hone = document.querySelector('.hone')
       htwo = document.querySelector('.htwo')
       hthree = document.querySelector('.hthree')
       hzero = document.querySelector('.hzero')
       center = document.querySelector('.center')
-
+      
       userCount = document.querySelector('.user')
       houseCount = document.querySelector('.house')
       wrapper = document.querySelector('#wrapper')
@@ -28,60 +21,89 @@ let buttonRules = document.querySelector('#br')
       circleBlue = document.querySelector('.circle-blue')
       circleRed = document.querySelector('.circle-red')
       pLose = document.querySelector('.lose')
-      
 
-  let userChoice = 'scissors',compSelect,compChoise
-  let i = 0
-  let j = 0
-    let yImg = {
-      col: circleYellow.classList.value, 
-      im: './images/icon-scissors.svg'
-    }
-    let bImg = {
-      col: circleBlue.classList.value,
-      im: './images/icon-paper.svg'
-    }
-    let rImg = {
-      col: circleRed.classList.value,
-      im: './images/icon-rock.svg'
-    }
+const yellowImg = {
+  col: circleYellow.classList.value, 
+  im: './images/icon-scissors.svg'
+}
+const blueImg = {
+  col: circleBlue.classList.value,
+  im: './images/icon-paper.svg'
+}  
+const redImg = {
+  col: circleRed.classList.value,
+  im: './images/icon-rock.svg'
+}  
+   
+buttonRules.addEventListener('click', toggle) 
 
-  wrapper.addEventListener('click', (event) => {
-    if (event.target.classList.contains('listen')) { 
-      console.log(event.target)
-      userChoice = event.target.dataset.listen
-      compSelect = Math.floor(Math.random() * 3)
+x.addEventListener('click', toggle)
 
-      showone.classList.add('h')
-      showtwo.classList.remove('h')
-      hone.classList.remove('h')
-      htwo.classList.remove('h')
+again.addEventListener('clck', () => {
+  eventPreventDefault
+})
 
-      console.log(compSelect)
-      
-      switch (compSelect) {
-        case 0 :
-          compChoise = 'paper'
-          break
-        case 1 :
-          compChoise = 'rock'
-          break
-        case 2 :
-          compChoise = 'scissors'
-          break
-      }
+wrapper.addEventListener('click', (event) => {
+  if (event.target.classList.contains('listen')) { 
+    console.log(event.target)
+    userChoice = event.target.dataset.listen
+    let compSelect = Math.floor(Math.random() * 3)
 
-    console.log(userChoice,compChoise)
+    showone.classList.add('h')
+    showtwo.classList.remove('h')
+    hone.classList.remove('h')
+    htwo.classList.remove('h')
 
-    let check = userChoice + ' ' + compChoise
-
-    console.log(check)
-      
-    switch (check) {
-      case 'paper paper':
-      case 'rock rock':
-      case 'scissors scissors':
+    switch (compSelect) {
+      case 0 :
+        compChoise = 'paper'
         break
+      case 1 :
+        compChoise = 'rock'
+        break
+      case 2 :
+        compChoise = 'scissors'
+        break
+    }
+    
+    if (userChoice == 'paper') {
+      changeProps(circleYellow, blueImg, 'circle-yellow')
+      }
+    if (userChoice == 'rock') {
+      changeProps(circleYellow, redImg, 'circle-yellow')
+    }  
+    if ( compChoise == 'paper') {
+      changeProps(circleRed,blueImg,'circle-red')
+    }
+    if ( compChoise == 'scissors') {
+      changeProps(circleRed,yellowImg,'circle-red')
+    }
+
+    var check = userChoice + ' ' + compChoise
+    setTimeout(() => {
+      htwo.classList.add('h')
+      hthree.classList.remove('h')
+      return setTimeout(() => {
+        winner(check)
+        center.classList.remove('h')
+        modalBack.classList.add('win')
+        modalBack.classList.toggle('mod-back')
+        modalWindow.classList.add('h')
+      },2000)
+    }, 2000)
+  }
+})
+  function toggle() { 
+    modalBack.classList.toggle('mod-back')
+  }
+  function winner(check) {
+    let i = 0
+    let j = 0
+    switch (check) {
+      // case 'paper paper':
+      // case 'rock rock':
+      // case 'scissors scissors':
+      //   break
 
       case 'rock paper':
       case 'scissors rock':
@@ -90,9 +112,7 @@ let buttonRules = document.querySelector('#br')
         waves.classList.add('wl')
         waves.classList.remove('h')
         i++
-        setTimeout(() => {
-          houseCount.innerHTML = i
-        },4000)  
+        houseCount.innerHTML = i 
         break  
 
       case 'paper rock':
@@ -102,48 +122,16 @@ let buttonRules = document.querySelector('#br')
         waves.classList.add('wr')
         waves.classList.remove('h')
         j++
-        setTimeout(() => {
-          userCount.innerHTML = j
-        },4000)  
+          userCount.innerHTML = j  
         break 
          
     }
-      if (userChoice == 'paper') {
-        changeProps(circleYellow, bImg, 'circle-yellow')
-      }
-      if (userChoice == 'rock') {
-        changeProps(circleYellow, rImg, 'circle-yellow')
-      }  
-      if ( compChoise == 'paper') {
-        changeProps(circleRed,bImg,'circle-red')
-      }
-      if ( compChoise == 'scissors') {
-        changeProps(circleRed,yImg,'circle-red')
-      }
-    
-      console.log(circleYellow)
-      console.log(circleRed)
-
-      setTimeout(() => {
-        htwo.classList.add('h')
-        hthree.classList.remove('h')
-        return setTimeout(() => {
-          center.classList.remove('h')
-          modalBack.classList.add('win')
-          modalBack.classList.toggle('mod-back')
-          modalWindow.classList.add('h')
-        },2000)
-      }, 2000)
-    }
-  })
+  }
 
   function changeProps(circ, temp, cl) {
     circ.classList.add(`${temp.col}`)
     circ.classList.remove(cl)
     circ.lastElementChild.lastElementChild.src = temp.im
   }
-  let again = document.querySelector('.again')
 
-   again.addEventListener('clck', () => {
-     eventPreventDefault
-   })  
+

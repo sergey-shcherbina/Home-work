@@ -3,7 +3,7 @@
 }
 .test {
   background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
-  height: 95vh;
+  height: 100gitvh;
   max-width: 1366px; 
   padding: 30px;
 }
@@ -83,7 +83,6 @@
   margin: 150px auto;
 }
 .win {
-  
   background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
   z-index: 0;
 }
@@ -100,7 +99,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  
 }
 
 .wl{
@@ -123,5 +121,4 @@
   width: 450px;
   height: 450px;
   border-radius: 50%;
-  
 }
